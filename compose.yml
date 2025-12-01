@@ -3,7 +3,7 @@ services:
     image: locustio/locust:2.31.2
     command: >
       --master
-      --host=https://chat.lab.tt
+      --host=${OPENWEBUI_HOST}
     environment:
       LOCUST_API_KEY: "${OPENWEBUI_API_KEY}"
       TARGET_MODEL: "${TARGET_MODEL}"
